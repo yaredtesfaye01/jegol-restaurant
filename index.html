@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jegol Arabian Restaurant | Ethiopian Skylight Hotel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        .gold-text { color: #C5A059; }
+        .gold-bg { background-color: #C5A059; }
+        .hero-overlay { background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.9)); }
+        
+        /* Mobile menu transition */
+        #mobile-menu { transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+        .menu-open { max-height: 400px; opacity: 1; }
+        .menu-closed { max-height: 0; opacity: 0; pointer-events: none; }
+    </style>
+</head>
+<body class="bg-[#faf9f6] text-slate-800 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-serif font-bold tracking-tight text-slate-900">JEGOL<span class="gold-text">.</span></span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-[#C5A059] transition">Experience</a>
+                    <a href="#menu" class="text-sm font-medium text-slate-600 hover:text-[#C5A059] transition">Menu</a>
+                    <a href="#reviews" class="text-sm font-medium text-slate-600 hover:text-[#C5A059] transition">Reviews</a>
+                    <a href="#location" class="text-sm font-medium text-slate-600 hover:text-[#C5A059] transition">Location</a>
+                    <a href="#booking" class="gold-bg text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-900 transition shadow-md">Book a Table</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-slate-100 menu-closed overflow-hidden absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-[#C5A059] rounded-md">Experience</a>
+                <a href="#menu" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-[#C5A059] rounded-md">Menu</a>
+                <a href="#reviews" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-[#C5A059] rounded-md">Reviews</a>
+                <a href="#location" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-[#C5A059] rounded-md">Location</a>
+                <a href="#booking" class="block px-3 py-3 mt-4 text-base font-medium gold-bg text-white rounded-md mx-4">Book a Table</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-[90vh] flex items-center justify-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&q=80" alt="Jegol Restaurant Interior" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10 md:mt-0">
+            <span class="block text-[#C5A059] text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-4">Ethiopian Skylight Hotel</span>
+            <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight">
+                Authentic Arabian <br>
+                <span class="italic font-light text-white/90">Elegance</span>
+            </h1>
+            <p class="text-slate-300 text-base md:text-lg mb-10 max-w-xl mx-auto font-light leading-relaxed">
+                Experience unparalleled Mediterranean flavors, artisanal fresh juices, and our signature Iftar buffet in the heart of Addis Ababa.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#booking" class="w-full sm:w-auto gold-bg text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-slate-900 transition shadow-lg text-center">Reserve Your Table</a>
+                <a href="#menu" class="w-full sm:w-auto bg-transparent border border-white/50 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition text-center">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 md:py-32 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-slate-900 mb-4">Our Culinary Highlights</h2>
+            <p class="text-slate-500 max-w-2xl mx-auto">A curated selection of traditional Mediterranean dishes, crafted with authentic spices and served with world-class hospitality.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 md:gap-20">
+            <div>
+                <h3 class="text-2xl font-serif text-[#C5A059] border-b border-slate-200 pb-4 mb-6 flex items-center gap-3">
+                    <i data-lucide="utensils" class="w-5 h-5"></i> Mezze & Starters
+                </h3>
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Golden Falafel & Tahini</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Crispy, spiced chickpea fritters served on an elegant gold-rimmed platter with fresh side vegetables and our signature creamy dipping sauce.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Steak Fries & Fresh Pita</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Thick-cut golden steak fries accompanied by warm, soft flatbread and premium fruit preserves.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Chicken Wings</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Perfectly marinated and cooked to a crisp, a favorite Mediterranean appetizer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-serif text-[#C5A059] border-b border-slate-200 pb-4 mb-6 flex items-center gap-3">
+                    <i data-lucide="chef-hat" class="w-5 h-5"></i> Signature Mains
+                </h3>
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1 flex items-center justify-between">
+                            Authentic Chicken Fattah 
+                            <span class="text-xs bg-slate-900 text-white px-2 py-1 rounded tracking-wider uppercase">Signature</span>
+                        </h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">A beautifully baked layered dish topped with diced fresh vegetables, fresh herbs, and a rich, dark balsamic/pomegranate drizzle.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Arabian Mixed Platter</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">A generous serving of spiced meats, seasoned rice, and roasted vegetables, prepared fresh by our expert chefs.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Mediterranean Spaghetti</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">A rich pasta dish infused with regional Mediterranean spices and olive oil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+                <i data-lucide="grape" class="w-64 h-64"></i>
+            </div>
+            
+            <h3 class="text-3xl md:text-4xl font-serif text-[#C5A059] mb-4 relative z-10">The Grand Buffet & Fresh Juice Bar</h3>
+            <p class="text-slate-300 max-w-3xl mx-auto mb-8 relative z-10 text-sm md:text-base leading-relaxed">
+                Join us for our highly acclaimed dining experience. Enjoy unlimited access to our expansive buffet, featuring exquisite dessert options and an array of freshly pressed juices including <strong>Pineapple, Melon, Apple, and vibrant mixed fruit blends</strong> displayed beautifully on our glass bars.
+            </p>
+            <div class="inline-flex items-center gap-2 bg-white/10 px-6 py-3 rounded-full text-sm font-medium border border-white/20">
+                <i data-lucide="star" class="w-4 h-4 text-[#C5A059] fill-current"></i>
+                Highly Rated for Iftar & Dinner Services
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-4 mb-4">
+                <h2 class="text-4xl font-serif text-slate-900">4.7</h2>
+                <div class="flex text-[#C5A059]">
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star-half" class="w-6 h-6 fill-current"></i>
+                </div>
+            </div>
+            <p class="text-slate-500 mb-12">Based on 101+ Verified Google Reviews</p>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <div class="flex text-[#C5A059] mb-3 w-4 h-4 fill-current"><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i></div>
+                    <p class="text-slate-600 text-sm mb-4 italic">"I had dinner buffet at skylight hotel jegol restaurant the service was professional food was delicious specially bisrat here service... I like everything thank you all we are coming again."</p>
+                    <p class="font-bold text-slate-900 text-sm">- Rich Rich</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <div class="flex text-[#C5A059] mb-3 w-4 h-4 fill-current"><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i></div>
+                    <p class="text-slate-600 text-sm mb-4 italic">"Waitress Jerusalem at jegol restaurant. The food was absolutely phenomenal—every dish was bursting with authentic flavor."</p>
+                    <p class="font-bold text-slate-900 text-sm">- Yisak Fantahun</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <div class="flex text-[#C5A059] mb-3 w-4 h-4 fill-current"><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i></div>
+                    <p class="text-slate-600 text-sm mb-4 italic">"An absolutely wonderful experience! From the moment we walked in, everything was perfect. The food was exceptional."</p>
+                    <p class="font-bold text-slate-900 text-sm">- Nexy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-20 md:py-32 px-4 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-slate-100">
+                <h3 class="text-3xl font-serif text-slate-900 mb-2">Reserve a Table</h3>
+                <p class="text-slate-500 text-sm mb-8">Join us at the Ethiopian Skylight Hotel for an unforgettable meal.</p>
+                
+                <form class="space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name</label>
+                            <input type="text" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059]" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone</label>
+                            <input type="tel" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059]" placeholder="+251 91 122 2989" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Date</label>
+                            <input type="date" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059]" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Guests</label>
+                            <select class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059]" required>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5+ People</option>
+                                <option value="buffet">Large Group / Buffet</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Special Requests (Optional)</label>
+                        <textarea rows="3" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C5A059]" placeholder="Celebrating an event, dietary requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full gold-bg text-white font-bold py-4 rounded-xl hover:bg-slate-900 transition shadow-md flex justify-center items-center gap-2">
+                        <i data-lucide="calendar-check" class="w-5 h-5"></i> Confirm Reservation
+                    </button>
+                </form>
+            </div>
+
+            <div id="location" class="flex flex-col justify-center h-full">
+                <h3 class="text-3xl font-serif text-slate-900 mb-8">Find Us</h3>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-[#C5A059] flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Ethiopian Skylight Hotel</h4>
+                            <p class="text-slate-500 mt-1">XQPQ+VPF, 2<br>Addis Ababa, Ethiopia</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-[#C5A059] flex-shrink-0">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Opening Hours</h4>
+                            <p class="text-slate-500 mt-1">Open Daily<br>Closes at 11:30 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-[#C5A059] flex-shrink-0">
+                            <i data-lucide="phone" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Direct Contact</h4>
+                            <a href="tel:0911222989" class="text-slate-500 hover:text-[#C5A059] mt-1 block">091 122 2989</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-slate-200 rounded-2xl h-48 w-full flex items-center justify-center text-slate-400 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80" alt="Map background" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-multiply">
+                    <span class="relative z-10 flex items-center gap-2 font-medium bg-white/90 px-4 py-2 rounded-lg shadow-sm text-slate-800">
+                        <i data-lucide="map" class="w-4 h-4"></i> View on Google Maps
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="text-3xl font-serif font-bold tracking-tight text-white mb-6">JEGOL<span class="gold-text">.</span></div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-white transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            </div>
+            <p class="text-sm">© 2026 Jegol Arabian Restaurant. All rights reserved.</p>
+            <p class="text-xs mt-2 text-slate-600">Located in the Ethiopian Skylight Hotel.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            if (menu.classList.contains('menu-closed')) {
+                menu.classList.remove('menu-closed');
+                menu.classList.add('menu-open');
+            } else {
+                menu.classList.remove('menu-open');
+                menu.classList.add('menu-closed');
+            }
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('menu-open');
+                menu.classList.add('menu-closed');
+            });
+        });
+    </script>
+</body>
+</html>
